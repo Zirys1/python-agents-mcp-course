@@ -10,10 +10,10 @@ This repository contains Python code examples for the Coursera course "AI Agents
 
 ## Setup
 
-Each module has its own `code/` directory. To set up any module:
+Each module has its own `python-code/` directory. To set up any module:
 
 ```bash
-cd <module>/code
+cd <module>/python-code
 pip install -r requirements.txt
 cp .env.example .env  # Then add your API key(s)
 ```
@@ -49,7 +49,7 @@ cp .env.example .env  # Then add your API key(s)
 | **Building Your First MCP AI Agent** | Ungraded Plugin | `agent.py`, `llm.py` | `python agent.py "question"` |
 | Agents Talking to Tools vs. Tools with AI | Video | — | — |
 
-**Code Location:** `01-intro-to-mcp-agents/code/`
+**Code Location:** `01-intro-to-mcp-agents/python-code/`
 
 **Key Files:**
 | File | Description |
@@ -63,7 +63,7 @@ cp .env.example .env  # Then add your API key(s)
 
 **Commands:**
 ```bash
-cd 01-intro-to-mcp-agents/code
+cd 01-intro-to-mcp-agents/python-code
 pip install -r requirements.txt
 python server.py              # Start the basic MCP server
 python agent.py "question"    # Run the basic agent
@@ -83,7 +83,7 @@ python test_server.py         # Test server tools directly
 | **Helping AI Agents on the Fly** | Ungraded Plugin | `workspace_server.py` | `python workspace_server.py` |
 | **Helping AI Agents Discover Workspace-related Guidance** | Ungraded Plugin | `workspace_agent.py` | `python workspace_agent.py "question"` |
 
-**Code Location:** `01-intro-to-mcp-agents/code/`
+**Code Location:** `01-intro-to-mcp-agents/python-code/`
 
 **Key Files:**
 | File | Description |
@@ -94,7 +94,7 @@ python test_server.py         # Test server tools directly
 
 **Commands:**
 ```bash
-cd 01-intro-to-mcp-agents/code
+cd 01-intro-to-mcp-agents/python-code
 python workspace_server.py           # Start workspace-aware server
 python workspace_agent.py "question" # Run workspace agent with context discovery
 ```
@@ -111,7 +111,7 @@ python workspace_agent.py "question" # Run workspace agent with context discover
 | **Minimizing AI Agent Cognitive Burden from Error Recovery** | Ungraded Plugin | `expense_server.py` | `python expense_server.py` |
 | **Helping AI Agents Find Alternative Paths to Fix Errors** | Ungraded Plugin | `expense_server.py` | `python expense_server.py` |
 
-**Code Location:** `02-failing-forward/code/`
+**Code Location:** `02-failing-forward/python-code/`
 
 **Key Files:**
 | File | Description |
@@ -122,7 +122,7 @@ python workspace_agent.py "question" # Run workspace agent with context discover
 
 **Commands:**
 ```bash
-cd 02-failing-forward/code
+cd 02-failing-forward/python-code
 pip install -r requirements.txt
 python expense_server.py           # Start the expense server
 python expense_agent.py "request"  # Run the expense agent
@@ -153,7 +153,7 @@ python test_failing_forward.py     # Run failing forward tests
 | Wrapping Up | Video | — | — |
 | Final Assessment | Assignment | — | — |
 
-**Code Location:** `03-intelligence-budget/code/`
+**Code Location:** `03-intelligence-budget/python-code/`
 
 **Key Files:**
 | File | Description |
@@ -169,7 +169,7 @@ python test_failing_forward.py     # Run failing forward tests
 
 **Commands:**
 ```bash
-cd 03-intelligence-budget/code
+cd 03-intelligence-budget/python-code
 pip install -r requirements.txt
 python agent_heavy_server.py   # Start agent-heavy server
 python tool_heavy_server.py    # Start tool-heavy server
@@ -191,28 +191,28 @@ python test_all.py             # Run comparison tests
 
 | Module | Coursera Item | Code File |
 |--------|---------------|-----------|
-| 2 | Building Your First MCP Server | `01-intro-to-mcp-agents/code/server.py` |
-| 2 | Building Your First MCP AI Agent | `01-intro-to-mcp-agents/code/agent.py` |
-| 3 | Teaching Agents to Use Tools | `01-intro-to-mcp-agents/code/workspace_server.py` |
-| 3 | Teaching Agents to Seek Help | `01-intro-to-mcp-agents/code/workspace_server.py` |
-| 3 | Helping Agents Find Guidance | `01-intro-to-mcp-agents/code/workspace_server.py` |
-| 3 | Helping AI Agents on the Fly | `01-intro-to-mcp-agents/code/workspace_server.py` |
-| 3 | Helping AI Agents Discover Workspace-related Guidance | `01-intro-to-mcp-agents/code/workspace_agent.py` |
-| 4 | Responses are More than Data | `02-failing-forward/code/expense_server.py` |
-| 4 | Designing Errors to Help AI Agents | `02-failing-forward/code/expense_server.py` |
-| 4 | Errors in Complex Workflows | `02-failing-forward/code/expense_server.py` |
-| 4 | Minimizing AI Agent Cognitive Burden from Error Recovery | `02-failing-forward/code/expense_server.py` |
-| 4 | Helping AI Agents Find Alternative Paths to Fix Errors | `02-failing-forward/code/expense_server.py` |
-| 5 | Managing AI Agent Cognitive Load | `03-intelligence-budget/code/agent_heavy_server.py`<br>`03-intelligence-budget/code/tool_heavy_server.py` |
-| 5 | Predictability, Lower Cost, Speed: Scripted Orchestration | `03-intelligence-budget/code/scripted_orchestration_server.py` |
-| 5 | Self-Prompting: Adding Reasoning to Tools | `03-intelligence-budget/code/self_prompting_server.py` |
-| 5 | AI Agent Tool Design for Common Errors | `03-intelligence-budget/code/validate_at_source_server.py` |
+| 2 | Building Your First MCP Server | `01-intro-to-mcp-agents/python-code/server.py` |
+| 2 | Building Your First MCP AI Agent | `01-intro-to-mcp-agents/python-code/agent.py` |
+| 3 | Teaching Agents to Use Tools | `01-intro-to-mcp-agents/python-code/workspace_server.py` |
+| 3 | Teaching Agents to Seek Help | `01-intro-to-mcp-agents/python-code/workspace_server.py` |
+| 3 | Helping Agents Find Guidance | `01-intro-to-mcp-agents/python-code/workspace_server.py` |
+| 3 | Helping AI Agents on the Fly | `01-intro-to-mcp-agents/python-code/workspace_server.py` |
+| 3 | Helping AI Agents Discover Workspace-related Guidance | `01-intro-to-mcp-agents/python-code/workspace_agent.py` |
+| 4 | Responses are More than Data | `02-failing-forward/python-code/expense_server.py` |
+| 4 | Designing Errors to Help AI Agents | `02-failing-forward/python-code/expense_server.py` |
+| 4 | Errors in Complex Workflows | `02-failing-forward/python-code/expense_server.py` |
+| 4 | Minimizing AI Agent Cognitive Burden from Error Recovery | `02-failing-forward/python-code/expense_server.py` |
+| 4 | Helping AI Agents Find Alternative Paths to Fix Errors | `02-failing-forward/python-code/expense_server.py` |
+| 5 | Managing AI Agent Cognitive Load | `03-intelligence-budget/python-code/agent_heavy_server.py`<br>`03-intelligence-budget/python-code/tool_heavy_server.py` |
+| 5 | Predictability, Lower Cost, Speed: Scripted Orchestration | `03-intelligence-budget/python-code/scripted_orchestration_server.py` |
+| 5 | Self-Prompting: Adding Reasoning to Tools | `03-intelligence-budget/python-code/self_prompting_server.py` |
+| 5 | AI Agent Tool Design for Common Errors | `03-intelligence-budget/python-code/validate_at_source_server.py` |
 
 ---
 
 ## Environment Setup
 
-Create a `.env` file in each module's `code/` directory:
+Create a `.env` file in each module's `python-code/` directory:
 
 ```env
 OPENAI_API_KEY=your-openai-key-here
@@ -232,7 +232,7 @@ code-repo/
 ├── .gitignore
 │
 ├── 01-intro-to-mcp-agents/
-│   └── code/
+│   └── python-code/
 │       ├── server.py              # Module 2: Building Your First MCP Server
 │       ├── agent.py               # Module 2: Building Your First MCP AI Agent
 │       ├── llm.py                 # LLM integration utilities
@@ -247,7 +247,7 @@ code-repo/
 │       └── workspace/             # Sample workspace with .context.md files
 │
 ├── 02-failing-forward/
-│   └── code/
+│   └── python-code/
 │       ├── expense_server.py      # Module 4: All error handling items
 │       ├── expense_agent.py       # Agent for expense workflows
 │       ├── test_failing_forward.py # Pattern tests
@@ -255,7 +255,7 @@ code-repo/
 │       └── README.md              # Setup instructions
 │
 └── 03-intelligence-budget/
-    └── code/
+    └── python-code/
         ├── agent_heavy_server.py           # Module 5: Managing Cognitive Load
         ├── tool_heavy_server.py            # Module 5: Managing Cognitive Load
         ├── hybrid_server.py                # Balanced approach
