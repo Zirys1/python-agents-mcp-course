@@ -13,6 +13,7 @@ Example:
 
 import asyncio
 import sys
+import traceback
 from typing import Any
 
 from dotenv import load_dotenv
@@ -62,7 +63,7 @@ async def run_agent(user_message: str) -> None:
     print("Connecting to MCP server...\n")
 
     server_params = StdioServerParameters(
-        command="python",
+        command=sys.executable,
         args=["server.py"],
     )
 
@@ -70,6 +71,7 @@ async def run_agent(user_message: str) -> None:
         async with ClientSession(read, write) as client:
             await client.initialize()
 
+            # PERCEIVE: Discover what tools exist
             tools_result = await client.list_tools()
             mcp_tools = tools_result.tools
             tools = mcp_tools_to_llm_tools(mcp_tools)
@@ -167,6 +169,9 @@ When you have enough information to answer the question, provide a clear, well-o
 # Main entry point
 # ========================================
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+        
     user_message = sys.argv[1] if len(sys.argv) > 1 else "What files are in the current directory?"
 
     print("=" * 50)
@@ -178,4 +183,5 @@ if __name__ == "__main__":
         asyncio.run(run_agent(user_message))
     except Exception as e:
         print(f"Agent error: {e}", file=sys.stderr)
+        traceback.print_exc()
         sys.exit(1)
